@@ -98,8 +98,8 @@
 		40A73EA62139CDD100461D37 /* NetworkingFramework */ = {
 			isa = PBXGroup;
 			children = (
+				40D3651D213B1486001674B8 /* Protocol */,
 				40A73EC22139D0CD00461D37 /* NetworkClients */,
-				40A73EBF2139CDEC00461D37 /* NetworkClientProtocol.swift */,
 				40A73EA72139CDD100461D37 /* NetworkingFramework.h */,
 				40A73EA82139CDD100461D37 /* Info.plist */,
 			);
@@ -122,6 +122,14 @@
 				40A73EBE2139CDEC00461D37 /* NativeClient.swift */,
 			);
 			path = NetworkClients;
+			sourceTree = "<group>";
+		};
+		40D3651D213B1486001674B8 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				40A73EBF2139CDEC00461D37 /* NetworkClientProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		7F52E34B75A0887DF8459DAB /* Pods */ = {

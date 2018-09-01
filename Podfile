@@ -6,9 +6,9 @@ target 'NetworkingFramework' do
   use_frameworks!
 
   # Pods for NetworkingFramework
-  pod 'Alamofire'
-  pod 'SwiftyJSON'
-  
+  pod 'Alamofire', '4.7.2'
+  pod 'SwiftyJSON', '4.1.0'
+
 
   target 'NetworkingFrameworkTests' do
     inherit! :search_paths
