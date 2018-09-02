@@ -8,11 +8,12 @@
 
 import Foundation
 
-struct NativeClient: NetworkClient {
+public struct NativeClient: NetworkClient {
     
-    typealias ReturnTypeObject = [String:Any]
+    public typealias Json = [String:Any]
+    public typealias ReturnTypeObject = Json
     
-    func get(baseURL: String, uri: String, params: [String: Any]?, completitionHandler: @escaping RequestCompletion<ReturnTypeObject>, errorHandler: @escaping RequestCompletionError) {
+    public func get(baseURL: String, uri: String, params: [String: Any]?, completitionHandler: @escaping RequestCompletion<ReturnTypeObject>, errorHandler: @escaping RequestCompletionError) {
         
         let urlString = "\(baseURL)\(uri)"
         
@@ -59,21 +60,5 @@ struct NativeClient: NetworkClient {
             print("Fail to generate URL with: \(urlString)")
             errorHandler(ServerError.unknown)
         }
-    }
-    
-    private func handleError(code: Int?) -> ServerError {
-        if let status = code {
-            switch status {
-            case 401:
-                return .Unauthorized
-            case 404:
-                return .NotFound
-            case 500:
-                return .Internal
-            default:
-                return .unknown
-            }
-        }
-        return .unknown
-    }
+    }    
 }

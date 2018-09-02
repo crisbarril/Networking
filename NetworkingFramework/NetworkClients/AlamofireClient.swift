@@ -10,11 +10,10 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-struct AlamofireClient: NetworkClient {
+public struct AlamofireClient: NetworkClient {    
+    public typealias ReturnTypeObject = JSON
     
-    typealias ReturnTypeObject = JSON
-    
-    func get(baseURL: String, uri: String, params: [String: Any]?, completitionHandler: @escaping RequestCompletion<ReturnTypeObject>, errorHandler: @escaping RequestCompletionError) {
+    public func get(baseURL: String, uri: String, params: [String: Any]?, completitionHandler: @escaping RequestCompletion<ReturnTypeObject>, errorHandler: @escaping RequestCompletionError) {
         
         let url = "\(baseURL)\(uri)"
         
