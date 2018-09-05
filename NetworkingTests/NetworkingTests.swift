@@ -1,15 +1,15 @@
 //
-//  NetworkingFrameworkTests.swift
-//  NetworkingFrameworkTests
+//  NetworkingTests.swift
+//  NetworkingTests
 //
-//  Created by Cristian on 31/08/2018.
+//  Created by Cristian Barril on 05/09/2018.
 //  Copyright © 2018 Cristian Barril. All rights reserved.
 //
 
 import XCTest
-@testable import NetworkingFramework
+@testable import Networking
 
-class NetworkingFrameworkTests: XCTestCase {
+class NetworkingTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
