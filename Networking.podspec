@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
  s.name = "Networking"
- s.version = "0.0.2"
+ s.version = "0.0.3"
  s.summary = "Networking Framework"
  s.description = "Framework to manage our networking tasks"
  s.homepage = "https://github.com/crisbarril/Networking"
