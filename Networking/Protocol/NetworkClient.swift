@@ -1,6 +1,6 @@
 //
 //  NetworkClient
-//  NetworkingFramework
+//  Networking
 //
 //  Created by Cristian on 31/08/2018.
 //  Copyright © 2018 Cristian Barril. All rights reserved.

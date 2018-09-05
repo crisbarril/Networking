@@ -12,7 +12,7 @@
 		69489F5021401C0000ED26DE /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 69489F4221401C0000ED26DE /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		69489F5E21401C1400ED26DE /* AlamofireClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69489F5A21401C1400ED26DE /* AlamofireClient.swift */; };
 		69489F5F21401C1500ED26DE /* NativeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69489F5B21401C1400ED26DE /* NativeClient.swift */; };
-		69489F6021401C1500ED26DE /* NetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69489F5D21401C1400ED26DE /* NetworkClientProtocol.swift */; };
+		69489F6021401C1500ED26DE /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69489F5D21401C1400ED26DE /* NetworkClient.swift */; };
 		80F42626AD1DB11D49ADD6B4 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86218117B52E6023A42660ED /* Pods_Networking.framework */; };
 		9D8ABB1A7AC86C76191A0894 /* Pods_NetworkingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCC26179D31740A868FEAD7 /* Pods_NetworkingTests.framework */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 		69489F4F21401C0000ED26DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69489F5A21401C1400ED26DE /* AlamofireClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireClient.swift; sourceTree = "<group>"; };
 		69489F5B21401C1400ED26DE /* NativeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeClient.swift; sourceTree = "<group>"; };
-		69489F5D21401C1400ED26DE /* NetworkClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocol.swift; sourceTree = "<group>"; };
+		69489F5D21401C1400ED26DE /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		86218117B52E6023A42660ED /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88499950EFB918E05344444B /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
 		ACDFB9BBDAEA199DD80DDCDB /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		69489F5C21401C1400ED26DE /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				69489F5D21401C1400ED26DE /* NetworkClientProtocol.swift */,
+				69489F5D21401C1400ED26DE /* NetworkClient.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -347,7 +347,7 @@
 			files = (
 				69489F5E21401C1400ED26DE /* AlamofireClient.swift in Sources */,
 				69489F5F21401C1500ED26DE /* NativeClient.swift in Sources */,
-				69489F6021401C1500ED26DE /* NetworkClientProtocol.swift in Sources */,
+				69489F6021401C1500ED26DE /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +503,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Barril.Networking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -525,7 +529,11 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Barril.Networking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -542,7 +550,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2S8NSR27X;
 				INFOPLIST_FILE = NetworkingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Barril.NetworkingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -558,7 +570,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T2S8NSR27X;
 				INFOPLIST_FILE = NetworkingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Barril.NetworkingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
