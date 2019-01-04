@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
  s.name = "Networking"
- s.version = "0.0.3"
+ s.version = "0.0.4"
  s.summary = "Networking Framework"
  s.description = "Framework to manage our networking tasks"
  s.homepage = "https://github.com/crisbarril/Networking"
@@ -11,6 +11,11 @@ Pod::Spec.new do |s|
  s.author = { "Cristian Barril" => "crisbarril@hotmail.com" }
  s.swift_version = '4.0'
  
+ # Platforms
+ s.ios.deployment_target = '10.0'
+ s.watchos.deployment_target = '4.0'
+
+ # Source 
  s.source = { :git => "https://github.com/crisbarril/Networking.git", :tag => s.version }
 
  s.default_subspecs = 'Full'
