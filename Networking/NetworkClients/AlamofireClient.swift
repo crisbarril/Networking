@@ -17,7 +17,7 @@ public struct AlamofireClient: NetworkClient {
         
         let url = "\(baseURL)\(uri)"
         
-        Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil)
+        AF.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil)
             .responseJSON { response in
                 
                 switch response.result {
@@ -32,9 +32,7 @@ public struct AlamofireClient: NetworkClient {
                     
                 case .failure(let requestError):
                     print("Request failed with error: \(requestError)")
-                    if let errorCode = requestError as? AFError {
-                        errorHandler(self.handleError(code: errorCode.responseCode))
-                    }
+                    errorHandler(self.handleError(code: requestError.responseCode))
                 }
         }
     }

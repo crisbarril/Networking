@@ -166,7 +166,6 @@
 				69489F3B21401C0000ED26DE /* Frameworks */,
 				69489F3C21401C0000ED26DE /* Headers */,
 				69489F3D21401C0000ED26DE /* Resources */,
-				447180389E63663891762BE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,8 +184,6 @@
 				69489F4421401C0000ED26DE /* Sources */,
 				69489F4521401C0000ED26DE /* Frameworks */,
 				69489F4621401C0000ED26DE /* Resources */,
-				CCA6B8D5ECE1F7989E6D59CC /* [CP] Embed Pods Frameworks */,
-				8213DBDC85E3F4F7C835406F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,56 +265,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		447180389E63663891762BE7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Networking/Pods-Networking-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8213DBDC85E3F4F7C835406F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CCA6B8D5ECE1F7989E6D59CC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkingTests/Pods-NetworkingTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2EBD63598EF75FA71C427F3 /* [CP] Check Pods Manifest.lock */ = {
@@ -511,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Barril.Networking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -537,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Barril.Networking";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -557,7 +504,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Barril.NetworkingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -577,7 +524,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Cristian-Barril.NetworkingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

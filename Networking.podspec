@@ -2,18 +2,18 @@
 Pod::Spec.new do |s|
 
  s.name = "Networking"
- s.version = "0.0.4"
+ s.version = "0.0.5"
  s.summary = "Networking Framework"
  s.description = "Framework to manage our networking tasks"
  s.homepage = "https://github.com/crisbarril/Networking"
  s.license = { :type => 'MIT', :file => 'LICENSE' }
  s.platform = :ios, '11.0'
  s.author = { "Cristian Barril" => "crisbarril@hotmail.com" }
- s.swift_version = '4.0'
+ s.swift_version = '5.0'
  
  # Platforms
- s.ios.deployment_target = '10.0'
- s.watchos.deployment_target = '4.0'
+ s.ios.deployment_target = '12.0'
+ s.watchos.deployment_target = '6.0'
 
  # Source 
  s.source = { :git => "https://github.com/crisbarril/Networking.git", :tag => s.version }
