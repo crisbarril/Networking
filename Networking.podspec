@@ -36,8 +36,8 @@ Pod::Spec.new do |s|
 
  s.subspec 'Alamofire' do |ss|
   ss.dependency 'Networking/Core'
-  ss.dependency 'Alamofire', '4.7.2'
-  ss.dependency 'SwiftyJSON', '4.1.0'
+  ss.dependency 'Alamofire'
+  ss.dependency 'SwiftyJSON'
   ss.source_files  = "Networking/NetworkClients/AlamofireClient.swift"
  end
 
